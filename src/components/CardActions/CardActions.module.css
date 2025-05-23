@@ -1,0 +1,28 @@
+.cardActions {
+  background-color: #edf3ff;
+  border-radius: 16px;
+  max-width: 414px;
+}
+
+.actionList {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 27px;
+}
+
+.actionItem {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  max-width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.actionLabel {
+  font-size: 13px;
+  font-weight: var(--fontWeightRegular);
+}

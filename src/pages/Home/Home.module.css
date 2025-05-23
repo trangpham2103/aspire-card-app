@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.sidebar {
+  width: 340px;
+  background-color: #0a2540;
+  color: white;
+  padding: 48px 50px 0 48px;
+}
+
+.logo {
+  margin-bottom: 81px;
+}
+
+.logo img {
+  width: 125px;
+  height: 38px;
+}
+
+.logoText {
+  font-size: 15px;
+  opacity: 0.3;
+  margin-top: 19px;
+  font-weight: var(--fontWeightRegular);
+  line-height: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.navItem.active {
+  color: #01D167;
+}
+
+.navText {
+  font-size: 16px;
+  font-weight: var(--fontWeightBold);
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.main {
+  flex: 1;
+  padding: 59px 60px 0 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.balanceLabel {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  margin-bottom: 9px;
+}
+
+.balanceAmount {
+  display: flex;
+  align-items: center;
+}
+
+.currency {
+  font-size: 13px;
+  font-weight: var(--fontWeightBold);
+  background-color: #01d167;
+  color: white;
+  padding: 2px 13px 4px 13px;
+  border-radius: 4px;
+  margin-right: 12px;
+}
+
+.amount {
+  font-size: 26px;
+  font-weight: var(--fontWeightBold);
+}
+
+.newCardButton {
+  display: flex;
+  background-color: #325baf;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: var(--fontWeightBold);
+}
+
+.newCardButton:hover {
+  background-color: #1e3a8a;
+}
+
+.addingIcon {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  background: white;
+  color: #325baf;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  opacity: 0.3;
+  font-weight: var(--fontWeightRegular);
+  padding-bottom: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tabActive {
+  opacity: unset;
+  font-weight: var(--fontWeightSemiBold);
+  border-bottom: 2px solid #23CEFD;
+  padding-bottom: 4px;
+}
+
+.cardSection {
+  display: flex;
+  gap: 46px;
+  padding: 32px 40px 40px 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carouselContainer {
+  max-width: 414px;
+  margin-bottom: 24px;
+}

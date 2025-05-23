@@ -1,0 +1,104 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 4px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.closeButton:hover {
+  color: #ef4444;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: var(--fontWeightSemiBold);
+  margin-bottom: 16px;
+  color: #0a2540;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: var(--fontWeightMedium);
+  margin-bottom: 8px;
+  color: #64748b;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancelButton {
+  padding: 8px 16px;
+  background-color: #d1d5db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #0a2540;
+}
+
+.cancelButton:hover {
+  background-color: #9ca3af;
+}
+
+.submitButton {
+  padding: 8px 16px;
+  background-color: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: #a3bffa;
+  cursor: not-allowed;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #1e3a8a;
+}

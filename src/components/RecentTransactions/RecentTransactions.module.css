@@ -1,0 +1,140 @@
+.container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f9ff;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 366px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: var(--fontWeightRegular);
+  margin: 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+}
+
+.transactionsIcon {
+  height: 24px;
+  margin-right: 12px;
+}
+
+.transaction {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: white;
+}
+
+.border {
+  border: 1px solid #f5f5f5;
+  margin: 0 24px;
+}
+
+.transactionWrapper:last-child {
+  background-color: #edfff5;
+}
+
+.transactionWrapper:last-child .transaction {
+  border-radius: 0 0 8px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transactionWrapper:last-child .border {
+  border: none;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.details {
+  flex: 1;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: var(--fontWeightSemiBold);
+  color: #222222;
+  margin: 0;
+}
+
+.date {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin: 4px 0 12px 0;
+}
+
+.typeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.type {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0;
+}
+
+.financeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #325baf;
+}
+
+.amount {
+  font-size: 14px;
+  font-weight: var(--fontWeightBold);
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #222222;
+}
+
+.viewAll {
+  background: #edfff5;
+  color: #01d167;
+  font-size: 13px;
+  font-weight: var(--fontWeightSemiBold);
+  padding: 16px 0;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.loading {
+  font-size: 13px;
+  margin-top: 30px;
+  font-weight: var(--fontWeightRegular);
+}

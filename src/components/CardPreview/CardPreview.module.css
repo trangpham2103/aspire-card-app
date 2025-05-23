@@ -1,0 +1,112 @@
+.root {
+  width: 414px;
+  background-color: white;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.card {
+  padding: 27px;
+  border-radius: 12px;
+  background: #01D167;
+  color: white;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease;
+}
+
+.frozen {
+  opacity: 0.5;
+}
+
+.logo {
+  width: 84px;
+  position: absolute;
+  right: 27px;
+  filter: brightness(0) invert(1);
+}
+
+.cardName {
+  font-size: 24px;
+  font-weight: var(--fontWeightBold);
+  line-height: 20px;
+  margin: 78px 0 32px 0;
+  text-transform: uppercase;
+}
+
+.cardNumber {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 14px;
+  font-weight: var(--fontWeightBold);
+  line-height: 19px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.dotGroup {
+  display: flex;
+  gap: 7px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+}
+
+.cardDetails {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: var(--fontWeightBold);
+}
+
+.cvv {
+  display: flex;
+  align-items: center;
+}
+
+.cvvLabel {
+  font-size: 13px;
+  font-weight: var(--fontWeightBold);
+  margin-right: 5px;
+}
+
+.cvvValue {
+  font-size: 24px;
+  font-weight: var(--fontWeightBold);
+  padding-top: 6px;
+}
+
+.visaLogo {
+  position: absolute;
+  right: 27px;
+  bottom: 27px;
+}
+
+.showNumberButton {
+  display: flex;
+  background: none;
+  border: none;
+  color: #01d167;
+  font-size: 12px;
+  font-weight: var(--fontWeightBold);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.eyeIcon {
+  margin: 0 6px 12px 0;
+  padding: 0;
+}
