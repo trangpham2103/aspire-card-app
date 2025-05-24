@@ -1,4 +1,4 @@
-.cardActions {
+.root {
   background-color: #edf3ff;
   border-radius: 16px;
   max-width: 414px;
@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   gap: 7px;
-  max-width: 60px;
+  max-width: 75px;
   text-align: center;
   cursor: pointer;
 }

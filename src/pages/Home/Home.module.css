@@ -1,14 +1,40 @@
+@import '../../styles/customMediaQueries.css';
+
 .container {
   display: flex;
   min-height: 100vh;
-  background-color: white;
+  background-color: #0c365a;
+  color: #ffffff;
+
+  @media (--viewportLargeWithPaddings) {
+    background-color: #ffffff;
+    color: #222222;
+  }
 }
 
-.sidebar {
-  width: 340px;
-  background-color: #0a2540;
-  color: white;
-  padding: 48px 50px 0 48px;
+.logoMobile {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  @media (--viewportLargeWithPaddings) {
+    display: none;
+  }
+}
+
+.sidebarDesktop {
+  display: none;
+
+  @media (--viewportLargeWithPaddings) {
+    display: block;
+    background-color: #0a2540;
+    color: white;
+    padding: 48px 50px 0 48px;
+  }
+
+  @media (--viewportLargeWithPaddings) {
+    max-width: 340px;
+  }
 }
 
 .logo {
@@ -28,26 +54,22 @@
   line-height: 20px;
 }
 
-.nav {
+.sidebarMobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 56px;
   display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.navItem {
-  display: flex;
+  justify-content: space-around;
   align-items: center;
-  gap: 16px;
-  cursor: pointer;
-}
+  gap: 58px;
+  box-shadow: 0 -3px 6px #00000014;
 
-.navItem.active {
-  color: #01D167;
-}
-
-.navText {
-  font-size: 16px;
-  font-weight: var(--fontWeightBold);
+  @media (--viewportLargeWithPaddings) {
+    display: none;
+  }
 }
 
 .icon {
@@ -56,14 +78,27 @@
 
 .main {
   flex: 1;
-  padding: 59px 60px 0 60px;
+
+  @media (--viewportLargeWithPaddings) {
+    padding: 59px 60px 0 60px;
+  }
+
+  @media (--viewportStandard) {
+    max-width: 1200px;
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  padding: 0 24px;
+  margin: 31px 0 26px 0;
+
+  @media (--viewportLargeWithPaddings) {
+    margin-bottom: 0 0 24px 0;
+    padding: 0;
+  }
 }
 
 .balanceLabel {
@@ -91,18 +126,30 @@
 .amount {
   font-size: 26px;
   font-weight: var(--fontWeightBold);
+  color: #ffffff;
+
+  @media (--viewportLargeWithPaddings) {
+    color: #222222;
+  }
 }
 
 .newCardButton {
   display: flex;
-  background-color: #325baf;
-  color: white;
-  padding: 8px 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 13px;
   font-weight: var(--fontWeightBold);
+  background-color: transparent;
+  color: #23cefd;
+  margin-top: 32px;
+
+  @media (--viewportLargeWithPaddings) {
+    background-color: #325baf;
+    color: white;
+    margin: 0;
+    padding: 8px 12px;
+  }
 }
 
 .newCardButton:hover {
@@ -113,43 +160,101 @@
   display: flex;
   height: 16px;
   width: 16px;
-  background: white;
-  color: #325baf;
+  background: #23cefd;
+  color: white;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   margin-right: 8px;
+  padding-bottom: 2px;
+
+  @media (--viewportLargeWithPaddings) {
+    background: white;
+    color: #325baf;
+  }
 }
 
 .tabs {
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+  padding: 0 24px;
+
+  @media (--viewportLargeWithPaddings) {
+    padding: 0;
+  }
 }
 
 .tab {
   opacity: 0.3;
   font-weight: var(--fontWeightRegular);
   padding-bottom: 4px;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
+
+  @media (--viewportLargeWithPaddings) {
+    font-size: 14px;
+  }
 }
 
 .tabActive {
   opacity: unset;
   font-weight: var(--fontWeightSemiBold);
-  border-bottom: 2px solid #23CEFD;
+  border-bottom: 2px solid #23cefd;
   padding-bottom: 4px;
 }
 
 .cardSection {
   display: flex;
   gap: 46px;
-  padding: 32px 40px 40px 40px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin-left: 24px;
+
+  @media (--viewportMedium) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (--viewportLargeWithPaddings) {
+    padding: 32px 40px 40px 40px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-left: 0;
+    align-items: unset;
+    justify-content: unset;
+  }
 }
 
 .carouselContainer {
-  max-width: 414px;
+  max-width: 358px;
   margin-bottom: 24px;
+
+  @media (--viewportLargeWithPaddings) {
+    max-width: 414px;
+  }
+}
+
+.rightSection {
+  display: none;
+
+  @media (--viewportLargeWithPaddings) {
+    display: block;
+  }
+}
+
+.cardActionsDesktop {
+  display: none;
+
+  @media (--viewportLargeWithPaddings) {
+    display: block;
+  }
+}
+
+.bottomSheet {
+  height: 100vh;
+  background-color: #ffffff;
+  border-radius: 20px 20px 0 0;
+}
+
+.cardActionsMobile {
+  border-radius: 20px 20px 0 0;
+  max-width: none;
 }

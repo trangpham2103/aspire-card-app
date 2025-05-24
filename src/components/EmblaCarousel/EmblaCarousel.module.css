@@ -23,12 +23,6 @@
   padding-left: var(--slide-spacing);
 }
 
-.emblaSlideNumber {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .emblaControls {
   display: flex;
   justify-content: center;

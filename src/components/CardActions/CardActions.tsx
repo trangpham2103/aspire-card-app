@@ -11,10 +11,11 @@ interface CardActionsProps {
   cards: Card[];
   activeCardIndex: number;
   toggleFreeze: (cardId: number) => void;
+  className?: string;
 }
 
 const CardActions: React.FC<CardActionsProps> = (props) => {
-  const { cards, activeCardIndex, toggleFreeze } = props;
+  const { cards, activeCardIndex, toggleFreeze, className } = props;
   const cardActions = [
     {
       icon: freezeCardIcon,
@@ -27,8 +28,10 @@ const CardActions: React.FC<CardActionsProps> = (props) => {
     { icon: cancelCardIcon, label: 'Cancel card' },
   ];
 
+  const classes = `${css.root} ${className}`;
+
   return (
-    <div className={css.cardActions}>
+    <div className={classes}>
       <div className={css.actionList}>
         {cardActions.map((action, index) => (
           <button

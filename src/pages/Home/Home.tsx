@@ -2,18 +2,16 @@ import React, { useState, useMemo } from 'react';
 import { useCardContext } from '@/context/CardContext';
 
 import AddCardModal from '@/components/AddCardModal/AddCardModal';
+import BottomSheet from '@/components/BottomSheet/BottomSheet';
 import CardActions from '@/components/CardActions/CardActions';
 import CardDetails from '@/components/CardDetails/CardDetails';
 import CardPreview from '@/components/CardPreview/CardPreview';
 import EmblaCarousel from '@/components/EmblaCarousel/EmblaCarousel';
+import NavigationBar from '@/components/NavigationBar/NavigationBar';
 import RecentTransactions from '@/components/RecentTransactions/RecentTransactions';
 
-import acountIcon from '@/assets/icons/account.svg';
-import cardIcon from '@/assets/icons/card.svg';
-import creditIcon from '@/assets/icons/credit.svg';
-import homeIcon from '@/assets/icons/home.svg';
 import logo from '@/assets/images/aspire-logo.svg';
-import paymentsIcon from '@/assets/icons/payments.svg';
+import logoMobile from '@/assets/images/aspire-logo-mobile.svg';
 
 import css from './Home.module.css';
 
@@ -32,36 +30,17 @@ const Home: React.FC = () => {
 
   return (
     <div className={css.container}>
-      {/* ----- SIDEBAR ----- */}
-      <div className={css.sidebar}>
+      <img src={logoMobile} alt="Aspire Logo" className={css.logoMobile} />
+
+      {/* ----- SIDEBAR DESKTOP----- */}
+      <div className={css.sidebarDesktop}>
         <div className={css.logo}>
           <img src={logo} alt="Aspire Logo" />
           <p className={css.logoText}>
             Trusted way of banking for 3,000+ SMEs and startups in Singapore
           </p>
         </div>
-        <nav className={css.nav}>
-          <div className={css.navItem}>
-            <img src={homeIcon} alt="Account Navigation" />
-            <span className={css.navText}>Home </span>
-          </div>
-          <div className={`${css.navItem} ${css.active}`}>
-            <img src={cardIcon} alt="Cards Navigation" />
-            <span className={css.navText}>Cards </span>
-          </div>
-          <div className={css.navItem}>
-            <img src={paymentsIcon} alt="Payments Navigation" />
-            <span className={css.navText}>Payments </span>
-          </div>
-          <div className={css.navItem}>
-            <img src={creditIcon} alt="Credit Navigation" />
-            <span className={css.navText}>Credit </span>
-          </div>
-          <div className={css.navItem}>
-            <img src={acountIcon} alt="Settings Navigation" />
-            <span className={css.navText}>Settings </span>
-          </div>
-        </nav>
+        <NavigationBar />
       </div>
 
       {/* ----- MAIN CONTENT ----- */}
@@ -98,6 +77,7 @@ const Home: React.FC = () => {
               cards={cards}
               activeCardIndex={activeCardIndex}
               toggleFreeze={toggleFreeze}
+              className={css.cardActionsDesktop}
             />
           </div>
           <div className={css.rightSection}>
@@ -106,6 +86,24 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* ----- BOTTOM NAVIGATE MOBILE ----- */}
+      <div className={css.sidebarMobile}>
+        <NavigationBar hasProfile={true} />
+        <BottomSheet>
+          <div className={css.bottomSheet}>
+            <CardActions
+              cards={cards}
+              activeCardIndex={activeCardIndex}
+              toggleFreeze={toggleFreeze}
+              className={css.cardActionsMobile}
+            />
+            <CardDetails />
+            <RecentTransactions />
+          </div>
+        </BottomSheet>
+      </div>
+
       <AddCardModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

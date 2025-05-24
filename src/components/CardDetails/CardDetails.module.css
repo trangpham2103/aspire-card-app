@@ -1,8 +1,14 @@
+@import '../../styles/customMediaQueries.css';
+
 .container {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  margin-top: 36px;
+  margin: 24px;
+
+  @media (--viewportLargeWithPaddings) {
+    margin: 36px 0 24px 0;
+  }
 }
 
 .header {
@@ -12,13 +18,22 @@
   background-color: #f5f9ff;
   padding: 24px;
   border-radius: 8px;
-  min-width: 366px;
+  min-width: 300px;
+
+  @media (--viewportLargeWithPaddings) {
+    min-width: 366px;
+  }
 }
 
 .title {
   font-size: 14px;
-  font-weight: var(--fontWeightRegular);
+  font-weight: var(--fontWeightSemiBold);
   margin: 0;
+  color: #0c365a;
+
+  @media (--viewportLargeWithPaddings) {
+    font-weight: var(--fontWeightRegular);
+  }
 }
 
 .titleRow {

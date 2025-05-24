@@ -1,6 +1,10 @@
+@import '../../styles/customMediaQueries.css';
+
 .root {
-  width: 414px;
-  background-color: white;
+  @media (--viewportLargeWithPaddings) {
+    width: 414px;
+    background-color: white;
+  }
 }
 
 .cardHeader {
@@ -12,7 +16,7 @@
 .card {
   padding: 27px;
   border-radius: 12px;
-  background: #01D167;
+  background: #01d167;
   color: white;
   position: relative;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,7 +24,7 @@
 }
 
 .frozen {
-  opacity: 0.5;
+  background-color: #b7e0cb;
 }
 
 .logo {
@@ -95,15 +99,23 @@
 }
 
 .showNumberButton {
+  background-color: #ffffff;
+  position: relative;
+  bottom: -24px;
   display: flex;
-  background: none;
   border: none;
   color: #01d167;
   font-size: 12px;
   font-weight: var(--fontWeightBold);
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 5px 10px 18px 10px;
   border-radius: 4px;
+
+  @media (--viewportLargeWithPaddings) {
+    background: transparent;
+    position: static;
+    padding: 4px 8px;
+  }
 }
 
 .eyeIcon {
