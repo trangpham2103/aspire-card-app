@@ -13,14 +13,25 @@ const AddCardModal: React.FC<AddCardModalProps> = ({ isOpen, onClose }) => {
   const [cardName, setCardName] = useState('');
   const [error, setError] = useState('');
 
+  const validateCardName = (name: string) => {
+    const cardNameRegex = /^[a-zA-Z0-9\s\-\.'"]+$/;
+    if (!name) return 'Card name is required';
+    if (!cardNameRegex.test(name)) return 'Card name can only contain letters, numbers, spaces, hyphens, dots, or single quotes';
+    if (name.length > 50) return 'Card name must not exceed 50 characters';
+    return null;
+  };
+
   const isFormValid = cardName.trim() !== '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!cardName.trim()) {
-      setError('Card name cannot be empty');
+    const validationError = validateCardName(cardName);
+
+    if (validationError) {
+      setError(validationError);
       return;
     }
+    
     await addNewCard(cardName);
     setCardName('');
     setError('');

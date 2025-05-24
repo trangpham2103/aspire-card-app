@@ -39,7 +39,10 @@
   font-weight: var(--fontWeightBold);
   line-height: 20px;
   margin: 78px 0 32px 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .cardNumber {
