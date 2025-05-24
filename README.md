@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+# Card Management Application
+This application is built using React, TypeScript, and Vite for a fast, type-safe, and modern development experience.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
+- [Usage](#usage)
+- [Setup and Running](#setup-and-running)
 
-Currently, two official plugins are available:
+## Usage
+### Hosted Application
+You can access the hosted application at: [https://aspire-card-app.vercel.app](https://aspire-card-app.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Features
+- **Add Card**: Enter a valid card name (max 50 characters, letters/numbers/spaces/-/.') and submit.
+- **Freeze/Unfreeze**: Toggle card state via the action menu.
+- **Show/Hide**: Toggle card visibility in the carousel.
+- **Slide Card**: Swipe through cards in the carousel to view and select different cards.
+- **Mobile Swipeable Drawer**: On mobile, use the swipe-up/down drawer for additional interactions (e.g., viewing card details or actions).
+- **Responsive Design**: Adjust your browser window or use a mobile device to see the mobile layout.
 
-## Expanding the ESLint configuration
+### Notes
+- The app uses a mock API located in src/api/mockAPI.ts to simulate card and transaction data.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Setup and Running
+1. Clone the repository:
+   ```
+   git clone https://github.com/trangpham2103/aspire-card-app
+   cd aspire-card-app
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+   - This will launch the app at `http://localhost:5173` (default Vite port). Open this URL in your browser.
